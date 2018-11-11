@@ -8,6 +8,7 @@
 <title>掲示板トップ</title>
 </head>
 <body>
+<<<<<<< HEAD
 <div id="bg">
     <div id="wrap">
         <h1>掲示板</h1>
@@ -52,5 +53,20 @@
         }
         colorNumber();
     </script>
+=======
+<h1>掲示板</h1>
+<nav>
+    <ul>
+        <li><a th:href="@{'/input'}">入力</a></li>
+    </ul>
+</nav>
+<div th:each="content : ${contents}">
+    <div>
+        <h2 th:text="${content.title}"></h2>
+        <div th:text="${content.contents}"></div>
+    </div>
+</div>
+
+>>>>>>> input
 </body>
 </html>
