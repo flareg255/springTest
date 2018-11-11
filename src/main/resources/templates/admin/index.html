@@ -6,10 +6,17 @@
 </head>
 <body>
 <h1>掲示板</h1>
-<div th:each="contents">
+<nav>
+    <ul>
+        <li><a th:href="@{'/input'}">入力</a></li>
+    </ul>
+</nav>
+<div th:each="content : ${contents}">
     <div>
-
+        <h2 th:text="${content.title}"></h2>
+        <div th:text="${content.contents}"></div>
     </div>
 </div>
+
 </body>
 </html>

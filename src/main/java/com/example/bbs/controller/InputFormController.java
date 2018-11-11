@@ -21,6 +21,6 @@ public class InputFormController {
 
 		inputFormProvider.insert(inputForm);
 
-		return "admin/index";
+		return "redirect:/admin/";
 	}
 }
