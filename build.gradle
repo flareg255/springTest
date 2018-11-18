@@ -59,3 +59,9 @@ task wrapper(type: Wrapper) {
 task stage {
   dependsOn assemble
 }
+
+stage.mustRunAfter(clean)
+
+clean << {
+    project.file('app.jar').delete()
+}
