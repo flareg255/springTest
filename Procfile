@@ -1,1 +1,1 @@
-web: java -jar build/libs/bbs.jar --server.port=$PORT
+web: java $JAVA_OPTS -jar target/bbs.jar -Dserver.port=$PORT $JAR_OPT
