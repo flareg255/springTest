@@ -56,12 +56,3 @@ defaultTasks "clean", "build"
 task wrapper(type: Wrapper) {
   gradleVersion = '4.8'
 }
-task stage {
-  dependsOn assemble
-}
-
-stage.mustRunAfter(clean)
-
-clean << {
-    project.file('bbs.jar').delete()
-}
