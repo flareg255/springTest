@@ -46,6 +46,11 @@ dependencies {
 	testImplementation('org.springframework.security:spring-security-test')
 }
 
+jar {
+    baseName = 'app'
+    version = '0.0.1'
+}
+
 task stage(type: Copy, dependsOn: [clean, build]) {
     from jar.archivePath
     into project.rootDir
