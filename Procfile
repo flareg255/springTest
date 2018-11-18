@@ -1,1 +1,1 @@
-web: java -jar target/bbs.jar --server.port=${PORT}
+web: java -jar target/*.jar --server.port=${PORT}
