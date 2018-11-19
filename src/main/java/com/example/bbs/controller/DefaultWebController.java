@@ -19,6 +19,6 @@ public class DefaultWebController {
 
 	@RequestMapping("/input")
 	public String inputForm() {
-		return "/form/inputForm";
+		return "form/inputForm";
 	}
 }
