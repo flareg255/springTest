@@ -20,7 +20,7 @@ public class AdminController {
 	public String redirecAdmin(Model model) {
 		List<Map<String, Object>> map = selectContentProvider.getContent();
 		model.addAttribute("contents", map);
-		return "/admin/index";
+		return "admin/index";
 	}
 
 	@RequestMapping("/admin/index")
