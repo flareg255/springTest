@@ -10,6 +10,11 @@ body{
     text-align: center;
 }
 
+#loginWrap table{
+    width: 250px;
+    margin:0 auto; 
+}
+
 #wrap{
     width: 80%;
     margin: 0 auto;
