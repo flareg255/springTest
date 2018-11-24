@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#wrap{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contentItem{
+    margin: 20px 0;
+    border: 1px solid #000;
+    line-height: 1.5em
+}
+
+.contentItem h2{
+    border-bottom: 1px solid #000;
+}

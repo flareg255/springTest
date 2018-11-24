@@ -2,6 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/style.css">
 <title>掲示板トップ</title>
 </head>
 <body>
@@ -11,12 +14,43 @@
         <li><a th:href="@{'/input'}">入力</a></li>
     </ul>
 </nav>
-<div th:each="content : ${contents}">
-    <div>
-        <h2 th:text="${content.title}"></h2>
-        <div th:text="${content.contents}"></div>
+<div id="bg">
+    <div id="wrap">
+        <div th:each="content : ${contents}">
+            <div class="contentItem">
+                <h2 th:text="${content.title}"></h2>
+                <div th:text="${content.contents.split('\r\n|\r|\n', -1)}"></div>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+        var maxNumber = 255;
+        var currentNumber = 0;
+        var colorFlag = true;
+        var wrap = document.getElementById('bg');
 
+        function colorNumber(){
+            if(currentNumber === maxNumber && colorFlag === true){
+                colorFlag = false;
+            }
+
+            if(colorFlag){
+                currentNumber++;
+                a.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
+                console.log(a.style.backgroundColor);
+            }else{
+                currentNumber--;
+                a.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
+                console.log(a.style.backgroundColor);
+                if(currentNumber === 0){
+                    colorFlag = true;
+                }
+            }
+
+            setTimeout(colorNumber, 10);
+        }
+        colorNumber();
+    </script>
 </body>
 </html>
