@@ -13,7 +13,9 @@ body{
 #wrap{
     width: 80%;
     margin: 0 auto;
+    padding: 10px;
     background-color: azure;
+
 }
 
 .contentItem{
