@@ -8,11 +8,7 @@
 <title>入力フォーム</title>
 </head>
 <body>
-    <div id="loginWrap">
-        <div>
-            <h2>更新履歴</h2>
-            <p>cssと気持ち悪いjsを追加しました。</p>
-        </div>
+    <div id="wrap">
         <form action="/inputFormConfirm" th:action="@{/inputFormConfirm}" th:object="${InputForm}" method="post">
             <table>
                 <tr>
