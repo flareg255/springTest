@@ -8,18 +8,18 @@
 <title>掲示板トップ</title>
 </head>
 <body>
-<h1>掲示板</h1>
-<nav>
-    <ul>
-        <li><a th:href="@{'/input'}">入力</a></li>
-    </ul>
-</nav>
 <div id="bg">
     <div id="wrap">
+        <h1>掲示板</h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{'/input'}">入力</a></li>
+            </ul>
+        </nav>
         <div th:each="content : ${contents}">
             <div class="contentItem">
                 <h2 th:text="${content.title}"></h2>
-                <div th:text="${content.contents.split('\r\n|\r|\n', -1)}"></div>
+                <div th:text="${content.contents}"></div>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
         var maxNumber = 255;
         var currentNumber = 0;
         var colorFlag = true;
-        var wrap = document.getElementById('bg');
+        var bg = document.getElementById('bg');
 
         function colorNumber(){
             if(currentNumber === maxNumber && colorFlag === true){
@@ -37,12 +37,12 @@
 
             if(colorFlag){
                 currentNumber++;
-                a.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
-                console.log(a.style.backgroundColor);
+                bg.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
+                console.log(bg.style.backgroundColor);
             }else{
                 currentNumber--;
-                a.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
-                console.log(a.style.backgroundColor);
+                bg.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
+                console.log(bg.style.backgroundColor);
                 if(currentNumber === 0){
                     colorFlag = true;
                 }

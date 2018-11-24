@@ -1,8 +1,14 @@
 @charset "utf-8";
+#loginWrap{
+    width: 80%;
+    margin: 200px auto;
+    text-align: center;
+}
 
 #wrap{
     width: 80%;
     margin: 0 auto;
+    background-color: azure;
 }
 
 .contentItem{
