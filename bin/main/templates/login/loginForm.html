@@ -8,22 +8,26 @@
     <title>login</title>
 </head>
 <body>
-    <div id="wrap">
+    <div id="loginWrap">
         <form th:action="@{/login}" method="POST">
             <table>
                 <tr>
                     <td><label for="username">user:</label></td>
-                    <td><input type="text" id="username" name="username" value="aaaa"></td>
+                    <td><input type="text" id="username" name="username" placeholder="username"></td>
                 </tr>
                 <tr>
                     <td><label for="password">password:</label></td>
-                    <td><input type="text" id="password" name="password" value="demo"></td>
+                    <td><input type="text" id="password" name="password" placeholder="password"></td>
                 </tr>
                 <tr>
-                    <td><button type="submit">login</button></td>
+                    <td colspan="2"><button type="submit">login</button></td>
                 </tr>
             </table>
         </form>
+        <div>
+            <h2>更新履歴</h2>
+            <p>cssと気持ち悪いjsを追加しました。</p>
+        </div>
     </div>
 </body>
 </html>
