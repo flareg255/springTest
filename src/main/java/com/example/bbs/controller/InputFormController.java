@@ -1,5 +1,7 @@
 package com.example.bbs.controller;
 
+import java.security.Principal;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +24,11 @@ public class InputFormController {
 	private InputUserFormProvider inputUserFormProvider;
 
 	@RequestMapping("/inputFormConfirm")
-	public String confirmForm(@Valid InputForm inputForm, Model model) {
+	public String confirmForm(@Valid InputForm inputForm, Model model,Principal principal) {
 
-		inputFormProvider.insert(inputForm);
+		String name = principal.getName();
+
+		inputFormProvider.insert(inputForm,name);
 
 		return "redirect:/admin/";
 	}

@@ -18,6 +18,7 @@
         <div th:each="content : ${contents}" class="col-xs-12">
             <div class="contentItem">
                 <h2 th:text="${content.title}" class="title"></h2>
+                <div th:if="${content.creater != null}" class="title"><span th:text="${content.creater}"></span></div>
                 <div th:text="${content.contents}" class="content"></div>
             </div>
         </div>

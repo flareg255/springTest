@@ -10,14 +10,14 @@ import com.example.bbs.model.form.InputForm;
 public interface InputFormProvider {
 
 	@InsertProvider(type = BbsInsertProbider.class,method="toInsert")
-	public void insert(InputForm inputForm);
+	public void insert(InputForm inputForm, String name);
 
 	public static class BbsInsertProbider extends SQL{
-		public String toInsert(InputForm inputForm) {
+		public String toInsert(InputForm inputForm, String name) {
 
 			INSERT_INTO("bbsmain");
 			VALUES("title","'" + inputForm.getTitle() + "'");
-			VALUES("creater","'" + inputForm.getTitle() + "'");
+			VALUES("creater","'" + name + "'");
 			VALUES("contents","'" + inputForm.getContents() + "'");
 			VALUES("createtime","now()");
 
