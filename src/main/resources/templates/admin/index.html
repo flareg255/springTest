@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="bg">
-    <div class="container">
+    <div id="wrap" class="container">
         <h1 class="col-xs-12">掲示板</h1>
         <nav class="col-xs-12">
             <ul>
@@ -21,7 +21,7 @@
         </nav>
         <div th:each="content : ${contents}" class="col-xs-12">
             <div class="contentItem">
-                <h2 th:text="${content.title}"></h2>
+                <h2 th:text="${content.title}" class="display-4"></h2>
                 <div th:text="${content.contents}"></div>
             </div>
         </div>
