@@ -13,6 +13,11 @@ li{
     list-style: none;
 }
 
+h2{
+    font-size: 1;
+    font-weight: normal;
+}
+
 #loginWrap{
     width: 80%;
     margin: 200px auto;
