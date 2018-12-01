@@ -33,6 +33,11 @@ h2{
     background-color: floralwhite;
 }
 
+#bg{
+    height: 100%;
+    position: fixed;
+}
+
 .contentItem{
     margin: 20px 0;
     border: 1px solid #000;

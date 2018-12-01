@@ -17,6 +17,7 @@ public interface InputFormProvider {
 
 			INSERT_INTO("bbsmain");
 			VALUES("title","'" + inputForm.getTitle() + "'");
+			VALUES("creater","'" + inputForm.getTitle() + "'");
 			VALUES("contents","'" + inputForm.getContents() + "'");
 			VALUES("createtime","now()");
 
