@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
 <script src="js/jquery-3.3.1.slim.min.js" th:src="@{/js/jquery-3.3.1.slim.min.js}"></script>
 <script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
-<title>入力フォーム</title>
+<title>掲示板入力フォーム</title>
 </head>
 <body>
     <div class="container">
+        <div th:include="menu/menu"></div>
         <form action="/inputFormConfirm" th:action="@{/inputFormConfirm}" th:object="${InputForm}" method="post">
             <div class="form-group">
                 <label>タイトル</label>

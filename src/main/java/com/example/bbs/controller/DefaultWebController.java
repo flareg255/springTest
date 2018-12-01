@@ -14,11 +14,16 @@ public class DefaultWebController {
 
 	@RequestMapping("/index")
 	public String index(Model model) {
-		return "index.html";
+		return "redirect:/admin/";
 	}
 
 	@RequestMapping("/input")
-	public String inputForm() {
+	public String inputForm(Model model) {
 		return "form/inputForm";
+	}
+
+	@RequestMapping("/userInput")
+	public String inputUserForm(Model model) {
+		return "useradd/inputForm";
 	}
 }

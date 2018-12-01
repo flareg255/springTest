@@ -1,0 +1,12 @@
+<nav class="col-xs-12">
+    <ul class="list-inline">
+        <li class="list-inline-item"><a th:href="@{'/index'}" class="btn btn-primary">一覧</a></li>
+        <li class="list-inline-item"><a th:href="@{'/input'}" class="btn btn-primary">入力</a></li>
+        <li class="list-inline-item"><a th:href="@{'/userInput'}" class="btn btn-primary">ユーザー作成</a></li>
+        <li class="list-inline-item">
+            <form role="form" id="logout" th:action="@{/logout}" method="post">
+                <button type="submit" class="btn btn-primary">ログアウト</button>
+            </form>
+        </li>
+    </ul>
+</nav>
