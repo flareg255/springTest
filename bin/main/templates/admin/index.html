@@ -12,14 +12,14 @@
 </head>
 <body>
 <div id="bg">
-    <div id="wrap">
-        <h1>掲示板</h1>
-        <nav>
+    <div class="container">
+        <h1 class="col-xs-12">掲示板</h1>
+        <nav class="col-xs-12">
             <ul>
                 <li><a th:href="@{'/input'}" class="btn btn-primary">入力</a></li>
             </ul>
         </nav>
-        <div th:each="content : ${contents}">
+        <div th:each="content : ${contents}" class="col-xs-12">
             <div class="contentItem">
                 <h2 th:text="${content.title}"></h2>
                 <div th:text="${content.contents}"></div>
