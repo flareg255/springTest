@@ -16,7 +16,13 @@
         <h1 class="col-xs-12">掲示板</h1>
         <nav class="col-xs-12">
             <ul>
-                <li><a th:href="@{'/input'}" class="btn btn-primary">入力</a></li>
+                <li class="col-xs-4"><a th:href="@{'/input'}" class="btn btn-primary">入力</a></li>
+                <li class="col-xs-4"><a th:href="@{'/userInput'}" class="btn btn-primary">ユーザー作成</a></li>
+                <li class="col-xs-4">
+                    <form role="form" id="logout" th:action="@{/logout}" method="post">
+                        <button type="submit" class="btn btn-primary">ログアウト</button>
+                    </form>
+                </li>
             </ul>
         </nav>
         <div th:each="content : ${contents}" class="col-xs-12">

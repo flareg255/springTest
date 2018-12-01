@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.passwordParameter("password")
 				.and()
 			.logout()
-				.permitAll();
+				.logoutSuccessUrl("/login").permitAll();
 	}
 
 	@Configuration

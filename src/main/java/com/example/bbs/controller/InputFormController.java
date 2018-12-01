@@ -23,4 +23,17 @@ public class InputFormController {
 
 		return "redirect:/admin/";
 	}
+
+	@RequestMapping("/inputFormUserConfirm")
+	public String confirmFormUser(@Valid InputForm inputFormUser, Model model) {
+
+		try {
+			inputFormProvider.insert(inputFormUser);
+
+			return "useradd/addSuccess";
+		}catch(Exception e) {
+			return "useradd/addFaile";
+		}
+
+	}
 }
