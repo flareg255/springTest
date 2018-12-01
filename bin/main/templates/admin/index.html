@@ -28,32 +28,32 @@
     </div>
 </div>
 <script>
-        var maxNumber = 255;
-        var currentNumber = 0;
-        var colorFlag = true;
-        var bg = document.getElementById('bg');
+    var maxNumber = 255;
+    var currentNumber = 0;
+    var colorFlag = true;
+    var bg = document.getElementById('bg');
 
-        function colorNumber(){
-            if(currentNumber === maxNumber && colorFlag === true){
-                colorFlag = false;
-            }
-
-            if(colorFlag){
-                currentNumber++;
-                bg.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
-                console.log(bg.style.backgroundColor);
-            }else{
-                currentNumber--;
-                bg.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
-                console.log(bg.style.backgroundColor);
-                if(currentNumber === 0){
-                    colorFlag = true;
-                }
-            }
-
-            setTimeout(colorNumber, 10);
+    function colorNumber(){
+        if(currentNumber === maxNumber && colorFlag === true){
+            colorFlag = false;
         }
-        colorNumber();
-    </script>
+
+        if(colorFlag){
+            currentNumber++;
+            bg.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
+            console.log(bg.style.backgroundColor);
+        }else{
+            currentNumber--;
+            bg.style.backgroundColor = 'rgb(' + currentNumber + ',' + currentNumber  + ',' +  currentNumber + ')';
+            console.log(bg.style.backgroundColor);
+            if(currentNumber === 0){
+                colorFlag = true;
+            }
+        }
+
+        setTimeout(colorNumber, 10);
+    }
+    colorNumber();
+</script>
 </body>
 </html>
