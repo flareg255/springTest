@@ -13,10 +13,7 @@ li{
     list-style: none;
 }
 
-.title{
-    font-size: 1em;
-    font-weight: normal;
-}
+
 
 #loginWrap{
     width: 80%;
@@ -30,7 +27,8 @@ li{
 }
 
 #wrap{
-    background-color: floralwhite;
+    background-color: ghostwhite;
+    padding:20px;
 }
 
 .contentItem{
@@ -42,6 +40,12 @@ li{
 .contentItem .title{
     border-bottom: 1px solid #000;
     padding: 10px;
+}
+
+.title h2{
+    font-size: 1em;
+    font-weight: normal;
+    margin:0;
 }
 
 .content{
