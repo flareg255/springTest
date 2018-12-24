@@ -8,6 +8,6 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface SelectContentProvider {
-	@Select("SELECT * FROM bbsmain")
+	@Select("SELECT * FROM bbsmain ORDER BY createtime DESC")
     List<Map<String, Object>> getContent();
 }
