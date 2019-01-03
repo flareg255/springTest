@@ -24,7 +24,7 @@
                 </div>
                	<div th:if="${content.contents}" class="content">
                		<div th:each="str, stat : ${content.contents.split('\r\n|\r|\n', -1)}">
-               			<a th:if="${str.startsWith('https://')}" th:text="${str}" th:href="${str}"></a>
+               			<a th:if="${str.startsWith('https://') || str.startsWith('http://')}" th:text="${str}" th:href="${str}"></a>
                			<span th:unless="${str.startsWith('https://')}" th:text="${str}"></span>
                			<br th:if="${!stat.last}"/>
                		</div>
