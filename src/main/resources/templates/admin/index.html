@@ -22,7 +22,13 @@
                     <div th:if="${content.containsKey('creater')}" class="col-3 col-offset-1"><span th:text="${content.creater}"></span></div>
                     <div th:text="${#dates.format(content.createtime,'yyyy/MM/dd')}" th:classappend="${content.containsKey('creater')} ? 'col-3 col-offset-1' : 'col-5 col-offset-1'"></div>
                 </div>
-                <div th:text="${content.contents}" class="content"></div>
+               	<div th:if="${content.contents}" class="content">
+               		<div th:each="str, stat : ${content.contents.split('\r\n|\r|\n', -1)}">
+               			<a th:if="${str.startsWith('https://')}" th:text="${str}" th:href="${str}"></a>
+               			<span th:unless="${str.startsWith('https://')}" th:text="${str}"></span>
+               			<br th:if="${!stat.last}"/>
+               		</div>
+               	</div>
             </div>
         </div>
     </div>
